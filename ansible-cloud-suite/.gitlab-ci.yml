@@ -1,0 +1,20 @@
+stages:
+  - validate
+  - build
+  - deploy
+
+validate:
+  stage: validate
+  script:
+    - echo "Validating syntax..."
+    - ansible-playbook --syntax-check playbooks/*.yml
+
+build:
+  stage: build
+  script:
+    - echo "Building something..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to environment..."
