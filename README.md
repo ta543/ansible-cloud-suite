@@ -19,6 +19,6 @@ This project aims to create a versatile, scalable, and secure cloud infrastructu
 
 - **Primary Tool**: Ansible
 - **Cloud Providers**: AWS / GCP / Azure
-- **CI/CD Tools**: Jenkins / GitLab CI
+- **CI/CD Tools**: GitLab CI
 - **Monitoring Tools**: Prometheus / Grafana, ELK Stack
 - **Version Control**: Git

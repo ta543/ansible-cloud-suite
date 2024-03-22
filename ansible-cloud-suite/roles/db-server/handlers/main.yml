@@ -1,2 +1,5 @@
 ---
-# handlers for the db-server role
+- name: restart mysql
+  ansible.builtin.service:
+    name: mysql
+    state: restarted

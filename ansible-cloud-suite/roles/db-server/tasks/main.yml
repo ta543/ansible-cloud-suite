@@ -1,2 +1,11 @@
 ---
-# tasks for the db-server role
+- name: Install MySQL server
+  ansible.builtin.package:
+    name: mysql-server
+    state: present
+
+- name: Ensure MySQL service is running
+  ansible.builtin.service:
+    name: mysql
+    state: started
+    enabled: yes

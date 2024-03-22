@@ -1,0 +1,1 @@
+upstream backend {\n    server backend1.example.com;\n    server backend2.example.com;\n}\n\nserver {\n    listen 80;\n\n    location / {\n        proxy_pass http://backend;\n    }\n}

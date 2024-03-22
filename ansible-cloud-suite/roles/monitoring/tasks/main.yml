@@ -1,2 +1,16 @@
 ---
-# tasks for the monitoring role
+- name: Install Prometheus
+  ansible.builtin.package:
+    name: prometheus
+    state: present
+
+- name: Deploy Prometheus configuration
+  ansible.builtin.template:
+    src: prometheus.yml.j2
+    dest: /etc/prometheus/prometheus.yml
+
+- name: Ensure Prometheus service is running
+  ansible.builtin.service:
+    name: prometheus
+    state: started
+    enabled: yes

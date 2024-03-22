@@ -1,2 +1,5 @@
 ---
-# handlers for the monitoring role
+- name: restart prometheus
+  ansible.builtin.service:
+    name: prometheus
+    state: restarted

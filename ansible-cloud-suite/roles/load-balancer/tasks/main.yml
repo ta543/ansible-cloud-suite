@@ -1,2 +1,16 @@
 ---
-# tasks for the load-balancer role
+- name: Install Nginx as a load balancer
+  ansible.builtin.package:
+    name: nginx
+    state: present
+
+- name: Deploy Nginx configuration for load balancing
+  ansible.builtin.template:
+    src: lb-config.j2
+    dest: /etc/nginx/nginx.conf
+
+- name: Ensure Nginx is running
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: yes
