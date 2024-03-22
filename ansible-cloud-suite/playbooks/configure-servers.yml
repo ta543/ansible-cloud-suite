@@ -1,2 +1,8 @@
 ---
-# Main playbook for configuring servers
+- name: Configure Servers
+  hosts: all
+  become: true
+  roles:
+    - common
+    - web-server
+    - db-server

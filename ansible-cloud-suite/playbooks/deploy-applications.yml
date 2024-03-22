@@ -1,2 +1,8 @@
 ---
-# Main playbook for application deployment
+- name: Deploy Applications
+  hosts: all
+  become: true
+  tasks:
+    - name: Placeholder for application deployment
+      debug:
+        msg: "This task will be replaced with application deployment steps."

@@ -1,2 +1,8 @@
 ---
-# Main playbook for setting up infrastructure
+- name: Setup Cloud Infrastructure
+  hosts: all
+  become: true
+  tasks:
+    - name: Placeholder for cloud infrastructure setup
+      debug:
+        msg: "This task will be replaced with cloud infrastructure setup steps."

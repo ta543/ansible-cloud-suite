@@ -1,0 +1,14 @@
+---
+# tasks file for common
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+- name: Install common packages
+  ansible.builtin.package:
+    name:
+      - vim
+      - git
+    state: present
